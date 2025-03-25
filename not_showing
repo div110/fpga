@@ -1,0 +1,5 @@
+apio upgrade
+apio install -a
+sudo modprobe usbserial
+sudo modprobe ftdi_sio
+sudo modprobe usbcore
