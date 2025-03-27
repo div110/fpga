@@ -5028,8 +5028,9 @@
     },
     "SB_LUT4": {
       "attributes": {
-        "abc9_lut": "00000000000000000000000000000001",
         "blackbox": "00000000000000000000000000000001",
+        "abc9_lut": "00000000000000000000000000000001",
+        "cells_not_processed": "00000000000000000000000000000001",
         "src": "/home/div110/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:177.1-225.10"
       },
       "parameter_default_values": {
@@ -9644,9 +9645,8 @@
     "main": {
       "attributes": {
         "hdlname": "\\main",
-        "dynports": "00000000000000000000000000000001",
         "top": "00000000000000000000000000000001",
-        "src": "blink.v:2.1-21.10"
+        "src": "led.v:3.1-23.10"
       },
       "ports": {
         "SW": {
@@ -9659,78 +9659,53 @@
         },
         "LED_R": {
           "direction": "output",
-          "bits": [ 4 ]
+          "bits": [ 2 ]
         },
         "LED_G": {
           "direction": "output",
-          "bits": [ 3 ]
+          "bits": [ "x" ]
         },
         "LED_B": {
           "direction": "output",
-          "bits": [ 7 ]
+          "bits": [ "x" ]
         }
       },
       "cells": {
-        "LED_B_SB_LUT4_O": {
-          "hide_name": 0,
-          "type": "SB_LUT4",
-          "parameters": {
-            "LUT_INIT": "0000000011111111"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/div110/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:12.34-13.52"
-          },
-          "port_directions": {
-            "I0": "input",
-            "I1": "input",
-            "I2": "input",
-            "I3": "input",
-            "O": "output"
-          },
-          "connections": {
-            "I0": [ "0" ],
-            "I1": [ "0" ],
-            "I2": [ "0" ],
-            "I3": [ 3 ],
-            "O": [ 7 ]
-          }
-        }
       },
       "netnames": {
         "CLK": {
           "hide_name": 0,
           "bits": [ 6 ],
           "attributes": {
-            "src": "blink.v:4.8-4.11"
+            "src": "led.v:5.8-5.11"
           }
         },
         "LED_B": {
           "hide_name": 0,
-          "bits": [ 7 ],
+          "bits": [ "x" ],
           "attributes": {
-            "src": "blink.v:7.9-7.14"
+            "src": "led.v:8.9-8.14"
           }
         },
         "LED_G": {
           "hide_name": 0,
-          "bits": [ 3 ],
+          "bits": [ "x" ],
           "attributes": {
-            "src": "blink.v:6.9-6.14"
+            "src": "led.v:7.9-7.14"
           }
         },
         "LED_R": {
           "hide_name": 0,
-          "bits": [ 4 ],
+          "bits": [ 2 ],
           "attributes": {
-            "src": "blink.v:5.9-5.14"
+            "src": "led.v:6.9-6.14"
           }
         },
         "SW": {
           "hide_name": 0,
           "bits": [ 2, 3, 4, 5 ],
           "attributes": {
-            "src": "blink.v:3.14-3.16"
+            "src": "led.v:4.14-4.16"
           }
         }
       }
